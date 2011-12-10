@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
@@ -8,6 +7,7 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Permismoto
   class Application < Rails::Application
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -38,5 +38,11 @@ module Permismoto
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    #Add Template for Refinery
+    Sass::Plugin.add_template_location(
+    Rails.root.join('public/stylesheets/sass').to_s,
+    Rails.root.join('public/stylesheets').to_s
+    )
   end
 end

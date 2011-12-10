@@ -6,7 +6,8 @@ source 'http://rubygems.org'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '~> 0.2.17'
-
+gem 'sass'
+gem 'haml'
 # Use unicorn as the web server
 # gem 'unicorn'
 
