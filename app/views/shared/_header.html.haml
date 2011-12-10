@@ -1,0 +1,13 @@
+#headerContainer
+  %h1.hide
+    = RefinerySetting.find_or_set(:site_name, "Permis Moto")
+  #logo
+    = link_to image_tag("logo1.png"), root_path
+  = render(:partial => "/shared/menu", :locals => { |
+      :dom_id => 'menu',                            |
+      :css => 'menu'                                |
+    })                                              |
+
+  #menumore
+    %p
+      Deviens Fan sur Facebook !
